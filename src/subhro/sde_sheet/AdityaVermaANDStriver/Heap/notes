@@ -1,0 +1,7 @@
+IMPORTANT NOTES:-
+
+1. MAX-HEAP means when we will "poll" from queue then largest element will be polled.
+    This is used when we want to keep the small number.
+    Used for smallest element.
+
+2. Vice-versa for MIN_HEAP. Used for Largest element.

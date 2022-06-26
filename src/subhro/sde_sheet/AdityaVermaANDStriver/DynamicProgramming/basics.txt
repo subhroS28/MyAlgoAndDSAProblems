@@ -1,0 +1,43 @@
+1. For preventing overflow, use mod as --> int mod = (int)1e9+7;
+2. Flow of Tabulation is opposite to that of recursion/memoization.
+    i.e. if in recursion we are going from 0 -> n-1 then in Tabulation we will go n-1 -> 0
+
+3. For Knapsack question, when we do Tabulation + Space Optimised, for pick case:-
+    a. For 0/1 Knapsack - pick = 1 + prev[j-coins[i]];
+    b. For Unbound Knapsack - pick = 1 + curr[j-coins[i]];
+
+    Because for 0/1 Knapsack only once we can pick thus no need to use curr[j-coins[i]].
+    But for Unbound Knapsack as we can pick same number multiple time, so we should use curr[j-coins[i]] rather than
+    prev[j-coins[i]] as prev[j-coins[i]] will hold wrong value.
+
+4. NOTE: - For Unbounded Knapsack we can further optimise space complexity by using only 1D in Tabulation.
+           Example se KnapsackUnbound.unboundedKnapsack5() method for reference or watch DP.23 of striver video
+
+5. If in any tabulation dp, current value depend on previous value like this :-
+     val = pre[i-1][j] + prev[i-1][j-1]
+     i.e. both have [i-1] in beginning then we can use single 1D array
+
+     Steps:-
+     a. understand the flow, example here the flow is like -> [j] and [j-1] i.e. in Right to left for input
+     in array from i -> len, then new flow will be:-
+
+     right to left only, thus direction of for loop will change from i -> len --> len -> i
+
+6. In tabulation the final solution will in those indexes which was used in recursion/memoization
+    Example:- In memoization/Recursion we called -->
+    "return matrixMultiplicationHelper(arr, 1, n-1, new Integer[n][n]);"
+
+    Thus, in tabulation answer will be in Index -> "dp[1][n-1]"
+
+7. FOR TABULATION, important points are:-
+   1. Form base case.
+   2. Know the direction of loop, as it will be opposite to the direction of Memoization/Recursion.
+   3. Know the starting point and ending point of the loop, i.e. from where will i or j start and end.
+   4. Then is it possible to do further space optimisation.
+   5. What are the index in which answer will be there.
+
+IMPORTANT LINKS - https://leetcode.com/problems/minimum-cost-to-cut-a-stick/discuss/1395121/4-Minutes-Read-Simple-No-Brainer-Recursion-%2B-Memoization
+
+
+
+

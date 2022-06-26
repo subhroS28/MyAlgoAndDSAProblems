@@ -1,0 +1,53 @@
+𝗦𝗼𝗺𝗲 𝘁𝗶𝗽𝘀 𝘁𝗼 𝗰𝗼𝗻𝘀𝗶𝗱𝗲𝗿 𝘄𝗵𝗶𝗹𝗲 𝗽𝗿𝗼𝗯𝗹𝗲𝗺-𝘀𝗼𝗹𝘃𝗶𝗻𝗴:
+
+If an input array is sorted then
+  - Binary search
+  - Two pointers
+
+If asked for all permutations/subsets then
+  - Backtracking
+
+If given a tree then
+  - DFS
+  - BFS
+
+If given a graph then
+  - DFS
+  - BFS
+
+If given a linked list then
+  - Two pointers
+
+If recursion is banned then
+  - Stack
+
+If must solve in-place then
+  - Swap corresponding values
+  - Store one or more different values in the same pointer
+
+If asked for maximum/minumum subarray/subset/options then
+  - Dynamic programming
+
+If asked for top/least K items then
+  - Heap
+
+If asked for common strings then
+  - Map
+  - Trie
+
+Else
+  - Map/Set for O(1) time & O(n) space
+  - Sort input for O(nlogn) time and O(1) space
+
+
+
+NOTE: IMPORTANT SUGGESTIONS:-
+1. DP VS Greedy [Always chose DP, except for below case]
+When you have been asked a job scheduling problem or where you need to maximize the profit/points, you can use greedy over DP but you should be able to explain proof of correctness properly. But generally it's tricky to use Greedy.
+
+2. OTHER POINTS:- 
+	1. When asked shortest path in graph -> choose BFS over DFS
+	2. When range based query -> Segment tree or Binary Index Tree
+	3. Longest Increasing or Decreasing -> Sliding window
+	4. FloorKey search or CeilKeySearch -> TreeMap
+
